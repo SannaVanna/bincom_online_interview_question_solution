@@ -10,8 +10,7 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db.init_app(app)
 
 
-def connect():
-    app.secret_key = "mybinconinterviewtesquestionsolution"
-    app.config['DEBUG'] = True
-    app.register_blueprint(routes, url_prefix="/")
-    return app
+
+app.secret_key = "mybinconinterviewtesquestionsolution"
+app.config['DEBUG'] = True
+app.register_blueprint(routes, url_prefix="/")
