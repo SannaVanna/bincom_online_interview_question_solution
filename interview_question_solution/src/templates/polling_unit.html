@@ -1,0 +1,18 @@
+{% extends "index.html" %}
+{% block content %}
+   <h3>Polling Unit Results</h3>
+    <form method="POST">
+      <label>Enter Polling Unit ID:</label>
+      <input type="text" name="pu_id">
+      <button type="submit">View</button>
+    </form>
+
+    {% if results %}
+      <h4>Results:</h4>
+      <ul>
+      {% for r in results %}
+        <li>{{ r.party_abbreviation }}: {{ r.party_score }}</li>
+      {% endfor %}
+      </ul>
+    {% endif %}
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends "index.html" %}
+{% block content %}
+    <h3>Add New Result</h3>
+    <form method="POST">
+      <label>Polling Unit ID:</label>
+      <input type="text" name="pu_id"><br>
+      <label>Party:</label>
+      <input type="text" name="party"><br>
+      <label>Score:</label>
+      <input type="number" name="score"><br>
+      <button type="submit">Save</button>
+    </form>
+
+    {% if message %}
+      <p>{{ message }}</p>
+    {% endif %}
+{% endblock %}
